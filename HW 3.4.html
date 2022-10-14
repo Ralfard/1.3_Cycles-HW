@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 4  Определить количество цифр в введенном числе.")
+
+        number=+prompt("Введите число что бы вычислить количество цифр в нем")
+        for(i=0;number>1;i++){                          // каждый раз цикл делит число на 10, в счетчик начисляется 1 единица, это число и есть количество цифр в заданном пользователем числе
+            number/=10                                  //
+        }
+        alert("Введённое вами число содержит "+i+" цифр")
+    </script>
+</body>
+</html>

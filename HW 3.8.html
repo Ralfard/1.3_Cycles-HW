@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 8  Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.")
+        
+        day=1
+
+        do{
+            switch(day){
+                case 1: day_name="Понедельник";
+                break; 
+                case 2: day_name="Вторник";
+                break; 
+                case 3: day_name="Среда";
+                break; 
+                case 4: day_name="Четверг";
+                break; 
+                case 5: day_name="Пятница";
+                break; 
+                case 6: day_name="Суббота";
+                break; 
+                case 7: day_name="Воскресенье";
+                break;
+            }
+            day+=1
+            if(day>7)
+            day=1
+        }
+        while(confirm("Сегодня "+day_name+". Показать следующий день?"))
+
+    </script>
+</body>
+</html>

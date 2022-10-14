@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 5  Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной пере- менной (не 10) для ввода чисел пользователем.")
+        
+        let number =0;
+            let negative=0;
+            let positive=0;                                     //задаём переменные
+            let zero=0;
+            let even=0;
+            let odd=0;
+
+            for (i = 1; i<11; i++) {                            //создаём счетчик что бы отсчитать колличество вводимых чисел
+                number=+prompt("Введите число №"+i,i)
+
+            if(number<0)                                        //проверяем полученые числа 
+            negative++
+            else if(number>0)
+            positive++
+            else if(number==0)
+            zero++
+            if(number%2==0 && number!=0)
+            even++
+            else if(number%2!=0)
+            odd++
+        }
+            alert("Положительных чисел: "+positive+" Отрицательных чисел: "+negative+" Нулей: "+zero+" Четных чисел: "+even+" Нечетных чисел: "+odd)
+
+    </script>
+</body>
+</html>

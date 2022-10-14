@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 3 Запросить у пользователя число и вывести все делители этого числа.<br>")
+        
+        
+        number=+prompt("Введите число что бы вычислить все делители этого числа","81")
+        let diviver=0                   //служит что бы проверять, делится ли число по модулю
+        for(i=number;i!=0;--i){         //с каждым циклом вычитает из i 1 и делит diviver на i
+            diviver=number%i                
+            if(diviver==0)              // проверяет делится ли число без остатка
+            document.write("<br>"+i)              //выписывает все делители
+        }
+
+    </script>
+</body>
+</html>

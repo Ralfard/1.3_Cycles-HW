@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 1  Подсчитать сумму всех чисел в заданном пользователем диапазоне.")
+        
+        var sum=0;                                                                          // записывает сумму всех чисел
+        var finish=true                                                                     // заставляет работать while
+        finish:while (finish){                                                              // нужен что бы выводить диалоговые окна снова если хотя бы одно из значений не верно
+            user_from=+prompt("Введите число с которго нужно начать отсчет","0");
+            user_to=+prompt("Введите число до которго нужно вести отсчет","9")+1;
+            if(user_from>=0 && user_to>user_from){
+                for(increment=user_from ;increment<user_to ; increment++){                      // складывает все числа начиная от самого маленького заканчивая самым большим
+                    sum+=increment;
+                }
+                if(increment==user_to)
+                alert("Сумма всех чисел в заданном вами диапазоне равна "+sum)                  // выводит сумму всех чисел пользователю
+                break finish;                                                                   // заканчивает цикл
+            }
+            else if(user_from>user_to)                                                          // сообщает пользователю что максимальное число меньше минимального
+            alert("Число с которого нужно начать отсчет меньше числа к которому нужно вести отсчет")
+            else if(user_from<0)
+            alert("Одно из введённых вами чисел меньше нуля")
+            else{
+                alert("Введённое вами значение не является числом")
+            }
+        }
+    </script>
+</body>
+</html>

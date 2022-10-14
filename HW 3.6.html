@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 6  Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.")
+        
+        let rez=0;
+        do{                                                                     //Запускаем цикл 1 раз что бы потом повторить если пользователь согласиться
+            let number1=+prompt("Введите число 1 что бы провести операцию","6")
+            let number2=+prompt("Введите число 2 что бы провести операцию","12")
+            let operator=prompt("Введите знак ","+")
+            switch(operator) {                                                   // Проверяем какой знак ввел пользователь  
+                case "+": rez= number1+number2                                   //и в зависимости от знака проводим операцию
+                break
+                case "-": rez= number1-number2
+                break
+                case "*": rez= number1*number2
+                break
+                case "/": rez= number1/number2
+                break
+                case "**": rez= number1**number2
+                break
+                default: alert("Операция не известна")
+            }alert("Результат: "+rez)
+        }while(confirm("Вы хотите продолжить?"))                                   //Если пользователь согласился запускаем цикл заного
+        
+    </script>
+</body>
+</html>

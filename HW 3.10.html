@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 10<br>  Игра «Угадай число».<br> Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом:<br> каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?».<br> В зависимости от того что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50.<br> Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100.<br> И так до тех пор, пока пользова- тель не выберет == N.")
+        
+        alert("Загадайте число от 0 до 100, что бы программа смогла отгадать его")
+        min=0                                                           //минимальный диапазон
+        max=100                                                         //максимальный диапазон
+        midl=Math.floor((max+min)/2)                                    //середина диапазона
+        N=0;                                                            //число пользователя
+        user_number=false;                                              //содержит команду пользователя
+        user_data=true                                                  //нужена что бы остановить цикл
+        for(i=0;user_number!==true;++i){                                //Цикл for нужен только что бы считать количество попыток угадать
+            user_data=prompt("Ваше число >,< или =="+midl+"?")          
+            switch(user_data){                                          //нужен что бы распознавать команды пользователя
+                case ">" : min=midl, midl=Math.floor((max+min)/2);
+                break;
+                case "<" : max=midl, midl=Math.floor((max+min)/2);
+                break;
+                case "==" : N=midl, user_number=true;
+                break;
+                }
+        }
+        if(user_number=true)
+        alert("Ваше число равно "+N+". Вы потратили "+i+" попыток")
+    </script>
+</body>
+</html>

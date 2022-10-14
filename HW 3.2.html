@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 2  Запросить 2 числа и найти только наибольший общий делитель.")
+        
+        a=+prompt("Введите первое число для которого будет найден общий делитель","45")
+        b=+prompt("Введите второе число для которого будет найден общий делитель","81")
+        ost_a=a;
+        ost_b=b;
+        
+        while(ost_a!=0 && ost_b!=0){
+            if(ost_a>ost_b)
+            ost_a=ost_a%ost_b
+            else
+            ost_b=ost_b%ost_a
+        }
+        nod=(ost_a==0)?ost_b:ost_a;       
+        alert("Наибольший делитель "+nod) 
+    </script>
+</body>
+</html>

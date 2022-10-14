@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        document.write("Task 9  Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.")
+        
+        let multiplier_1=1              // Первый множитель
+        let multiplier_2=2              // второй 
+        let equally=0                   // показывает результат умножения за знаком равно
+
+        for(;multiplier_2<10;++multiplier_2){                           //после выполнения внутреннего цикла увеличивает multiplier_2 на 1
+            document.write("<br>Умножение на "+multiplier_2+"<br>");                  //показывает что multiplier_2 увеличился на 1 и будет выведна колонка с умножением на это число
+            if(multiplier_1===11){                                      //возвращает multiplier_1 в начало, к числу 1
+                multiplier_1=1;
+            }
+            for(;multiplier_1<11;++multiplier_1){                       //по очереди увеличивает multiplier_1 на 1
+                equally=multiplier_1*multiplier_2                       //считает результат умножения
+                document.write(multiplier_1+"x"+multiplier_2+"="+equally+"<br>")  //выводит в консоль таблицу умножения и повторяет всё сначала
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>
